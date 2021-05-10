@@ -89,9 +89,7 @@ class Queue {
 
         if (head == null){
             return;
-        }
-
-        else {
+        } else {
             while(current != null){
                 index = current.next;
                 while(index != null){
@@ -149,7 +147,14 @@ class Queue {
             if(wtime[qtype][0] != 0 || count == 0) {
                 wtime[qtype][0] = 0;
             }else{
-                wtime[qtype][count] = aPrev[qtype] + bPrev[qtype] - temp.arrival + wtime[qtype][count-1];
+                int waitPrev = 0;
+                for (int i = size()-1; i > 0; i--) {
+                    if (wtime[qtype][i]!=0) {
+                        waitPrev = wtime[qtype][i];
+                        break;
+                    }
+                }
+                wtime[qtype][count] = aPrev[qtype] + bPrev[qtype] - temp.arrival + waitPrev;
                 if (wtime[qtype][count] < 0) {
                     wtime[qtype][count] = 0;
                 }

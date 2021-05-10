@@ -28,7 +28,7 @@ public class Main {
 //        q.addLast(p9);
 //        q.FCFS();
 
-        try (Scanner fileReader = new Scanner(Paths.get("file.txt"))) {
+        try (Scanner fileReader = new Scanner(Paths.get("ASD/file.txt"))) {
             while (fileReader.hasNextLine()) {
                 String line = fileReader.nextLine();
                 String[] parts = line.split(",");

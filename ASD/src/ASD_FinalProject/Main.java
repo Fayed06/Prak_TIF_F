@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         Queue q = new Queue();
         int jmlh = 1;
-
+//        path file nya tergantung pemilihan lokasi "file.txt"
         try (Scanner fileReader = new Scanner(Paths.get("ASD/file.txt"))) {
             while (fileReader.hasNextLine()) {
                 String line = fileReader.nextLine();

@@ -24,7 +24,7 @@ public class Main {
         } catch (Exception e) {
             System.out.println("Reading the file failed.");
         }
-
+        q.sortData();
         q.FCFS(jmlh);
     }
 }
